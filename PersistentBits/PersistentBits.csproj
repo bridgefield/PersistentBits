@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <PackageId>bridgefield.PersistentBits</PackageId>
+        <Company>bridgefield GmbH</Company>
+        <RepositoryUrl>https://github.com/bridgefield/PersistentBits</RepositoryUrl>
+        <Owner>bridgefield</Owner>
+        <AssemblyName>Bridgefield.PersistentBits</AssemblyName>
+        <RootNamespace>Bridgefield.PersistentBits</RootNamespace>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="bridgefield.MonadicBits" Version="0.3.0" />
+    </ItemGroup>
+
+</Project>
