@@ -48,7 +48,11 @@ namespace Bridgefield.PersistentBits
             public Maybe<Stream> OpenRead() =>
                 Path.JustWhen(File.Exists).Map<Stream>(File.OpenRead);
 
-            public void Write(Action<Stream> writeAction) => writeAction(File.OpenWrite(Path));
+            public void Write(Action<Stream> writeAction)
+            {
+                using var stream = File.OpenWrite(Path);
+                writeAction(stream);
+            }
         }
     }
 }
